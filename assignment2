@@ -1,0 +1,100 @@
+ #include<stdio.h>
+void swap_ref(int*, int*);
+void swap_val(int, int);
+ 
+ 
+void swap_val(int a, int b)
+{
+   int temp;
+ 
+   temp = b;
+   b = a;
+   a = temp;
+}
+void swap_ref(int *a, int *b)
+{
+   int temp;
+ 
+   temp = *b;
+   *b = *a;
+   *a = temp;   
+}
+
+ 
+
+ 
+int main()
+{
+   int x, y;
+ 
+   printf("Enter the value of x and y\n");
+   scanf("%d%d",&x,&y);
+ 
+   printf("Before Swapping\nx = %d\ny = %d\n", x, y);
+ 
+   swap_ref(&x, &y); 
+   swap_val(x, y); 
+   
+   printf("After Swapping using call by reference\nx = %d\ny = %d\n", x, y);
+   printf("After Swapping using call by value\nx = %d\ny = %d\n", x, y);
+   
+   return 0;
+}
+[9:42 AM, 2/2/2022] Munni Madam 2: #include <stdio.h>
+int main()
+{
+    int n, m,i, j,first[10][10], second[10][10], sum[10][10], diff[10][10];
+    printf("Enter no of rows and columns of the first matrix");
+    scanf("%d%d", &m,&n);
+    printf("Enter the elements of the first matrix %d", m*n);
+    for(i=0; i<m; i++) 
+        for(j=0; j<n;j++)  
+            scanf("%d",&first[i][j]);
+    printf("Enter the elements of the second matrix %d", m*n);
+    for(i=0; i<m; i++) 
+        for(j=0; j<n; j++)
+            scanf("%d", &second[i][j]);
+    printf("The first matrix is:");
+    for(i=0;i< m; i++)
+    {
+        for(j= 0; j<n; j++)
+        {
+            printf("%d",first[i][j]);
+        }
+    printf("\n");
+    }
+    printf("The second matrix is:");
+    for(i=0; i<m; i++)
+    {
+        for(j=0;j< n;j+…
+[9:42 AM, 2/2/2022] Munni Madam 2: include<stdio.h>
+void swap_ref(int*, int*);
+void swap_val(int, int);
+void swap_val(int a, int b)
+{
+   int temp;
+ 
+   temp = b;
+   b = a;
+   a = temp;
+}
+void swap_ref(int *a, int *b)
+{
+   int temp;
+ 
+   temp = *b;
+   *b = *a;
+   *a = temp;   
+}
+int main()
+{
+   int x, y;
+ printf("Enter the value of x and y\n");
+   scanf("%d%d",&x,&y);
+ printf("Before Swapping\nx = %d\ny = %d\n", x, y);
+ swap_ref(&x, &y); 
+   swap_val(x, y); 
+    printf("After Swapping using call by reference\nx = %d\ny = %d\n", x, y);
+   printf("After Swapping using call by value\nx = %d\ny = %d\n", x, y);
+   return 0;
+}
